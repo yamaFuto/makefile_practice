@@ -8,7 +8,7 @@ CXX_WARNINGS = -Wall -Wextra -Wpedantic
 CXX = g++
 CXXFLAGS = $(CXX_WARNINGS) -std=$(CXX_STANDARD)
 CPPFLAGS = -I $(INCLUDE_DIR)
-LDFLAGS =
+LDFLAGS = -lmath
 
 ifeq ($(DEBUG), 1)
 CXXFLAGS += -g -O0

@@ -18,7 +18,7 @@ CXX_STANDARD = c++17
 CXX_WARNINGS = -Wall -Wextra -Wpedantic
 CXX = g++
 CXXFLAGS = $(CXX_WARNINGS) -std=$(CXX_STANDARD)
-LDFLAGS =
+LDFLAGS = -lmath
 
 ifeq ($(DEBUG), 1)
 CXXFLAGS += -g -O0

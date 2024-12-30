@@ -5,7 +5,7 @@ CXX_STANDARD = c++17
 CXX_WARNINGS = -Wall -Wextra -Wpedantic
 CXX = g++
 CXXFLAGS = $(CXX_WARNINGS) -std=$(CXX_STANDARD)
-LDFLAGS =
+LDFLAGS = -lmath
 
 ifeq ($(DEBUG), 1)
 CXXFLAGS += -g -O0
@@ -31,7 +31,7 @@ clean:
 ## PATTERNS ##
 ##############
 # $@: the file name of the target
-# $<: the name of the first ependency
+# $<: the name of the first dependency
 # $^: the names of all prerequisites
 %.o: %.cc
 	$(CXX_COMPILER_CALL) -c $< -o $@
